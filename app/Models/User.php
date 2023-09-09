@@ -10,8 +10,13 @@ use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
 
-class User extends Authenticatable
+use Laratrust\Contracts\LaratrustUser;
+use Laratrust\Traits\HasRolesAndPermissions;
+
+class User extends Authenticatable implements LaratrustUser
 {
+    use HasRolesAndPermissions;
+
     use HasApiTokens;
     use HasFactory;
     use HasProfilePhoto;
