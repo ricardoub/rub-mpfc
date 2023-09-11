@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('fii_category_id');
 
-            $table->string('codigo', 25);
+            $table->string('sigla', 15);
+            $table->string('nome', 100);
             $table->string('descricao', 255);
 
             $table->timestamps();

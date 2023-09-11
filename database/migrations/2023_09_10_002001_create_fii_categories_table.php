@@ -14,7 +14,8 @@ return new class extends Migration
         Schema::create('fii_categories', function (Blueprint $table) {
             $table->id();
 
-            $table->string('codigo', 25);
+            $table->string('sigla', 15);
+            $table->string('nome', 100);
             $table->string('descricao', 255);
 
             $table->timestamps();
