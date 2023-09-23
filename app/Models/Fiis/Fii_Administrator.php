@@ -1,11 +1,13 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Fiis;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class FiiAdministrator extends Model
+class Fii_Administrator extends Model
 {
+    protected $table = 'fii_administrators';
+
     use HasFactory;
 }
